@@ -33,116 +33,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700;900&family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
+      <link rel="stylesheet" href="./css/main.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
-    <style>
-        body {
-            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-        }
-
-        .wave {
-            background: linear-gradient(135deg,#230069, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #9660f3, #a600ff) fixed;
-            --mask: radial-gradient(calc(3.84vh + 3px) at 50% calc(100% + 2.40vh),#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) calc(50% - 6vh) calc(50% - 1.5vh - 3px + .5px)/12vh calc(3vh + 6px) repeat-x, radial-gradient(calc(3.84vh + 3px) at 50% -2.4vh,#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) 50% calc(50% + 1.5vh + 3px)/12vh calc(3vh + 6px) repeat-x;
-            -webkit-mask: var(--mask);
-            mask: var(--mask);
-            height: 3rem;
-        }
-
-
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      /* Custom default button */
-    .btn-light,
-    .btn-light:hover,
-    .btn-light:focus {
-    color: #333;
-    text-shadow: none; /* Prevent inheritance from `body` */
-    }
-
-
-    /*
-    * Base structure
-    */
-
-    .cover-container {
-    max-width: 42em;
-    }
-
-
-    /*
-    * Header
-    */
-
-    .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
-    border-bottom: .25rem solid transparent;
-    }
-
-    .nav-masthead .nav-link:hover,
-    .nav-masthead .nav-link:focus {
-    border-bottom-color: rgba(255, 255, 255, .25);
-    }
-
-    .nav-masthead .nav-link + .nav-link {
-    margin-left: 1rem;
-    }
-
-    .nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
-    }
-
-    </style>
 
     
     <!-- Custom styles for this template -->
@@ -151,24 +43,25 @@
   
     <body class="d-flex text-center text-bg-dark wave-container">
         <div class="d-flex flex-column mx-auto w-100">
-            <nav class="nav fixed-top nav-masthead justify-content-center float-md-end p-2 pb-2 bg-dark">
-                <a class="nav-link fw-bold py-1 px-0 active" href="#mainsection">Main</a>
-                <a class="nav-link fw-bold py-1 px-0" href="#aboutsection">About</a>
-                <a class="nav-link fw-bold py-1 px-0" href="#skillssection">Skills</a>
-                <a class="nav-link fw-bold py-1 px-0" href="#projectssection">Projects</a>
-                <a class="nav-link fw-bold py-1 px-0" href="#linkssection">Social links</a>
+            <nav class="nav fixed-top nav-masthead justify-content-center float-md-end p-2 pb-2 bg-dark opacity-75">
+                <a class="nav-link fw-bold py-1 px-0 opacity-100 active" href="#mainsection">Main</a>
+                <a class="nav-link fw-bold py-1 px-0  opacity-100" href="#aboutsection">About</a>
+                <a class="nav-link fw-bold py-1 px-0  opacity-100" href="#skillssection">Skills</a>
+                <a class="nav-link fw-bold py-1 px-0  opacity-100" href="#projectssection">Projects</a>
+                <a class="nav-link fw-bold py-1 px-0  opacity-100" href="#linkssection">Social links</a>
             </nav>
         <section id="mainsection" style="min-height: 100vh;">
+          <canvas class="p-canvas-webgl" id="canvas-webgl"></canvas>
         <div class="container">
             <header class="m-auto">
                 <div class="container">
-                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center shadow-lg" style="margin-top: 35vh;">
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center" style="margin-top: 35vh;">
                       <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                         <h1 class="display-4 fw-bold lh-1">Egor Bron</h1>
-                        <p class="lead"><del>Not</del> always sleeping and <del>not</del> that serious developer.</p>
+                        <p class="lead"><del>Not</del> always sleeping and <del>not</del> that serious.</p>
                         <p>Page is in progress...</p>
                       </div>
-                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
                           <img class="rounded-5" src="https://avatars.githubusercontent.com/u/71507444" alt="" width="128">
                       </div>
                     </div>
@@ -181,41 +74,53 @@
     <div class="wave"></div>
     <section id="aboutsection">
         <br><br>
-        <h1>About me</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem ullam maxime nisi magni perferendis? Sint atque non eius deserunt placeat ea quisquam in! Debitis illo fuga labore voluptatum, blanditiis numquam.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestias quaerat temporibus ducimus est provident, ipsum nulla, animi voluptates numquam debitis voluptas sed tempora! Maxime voluptatem perspiciatis velit exercitationem voluptas?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut doloremque nisi quod libero suscipit ea distinctio doloribus labore. Ipsum, velit totam. Maxime voluptas qui doloribus accusantium neque eius natus ad!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt voluptatem saepe iure nisi quibusdam laudantium magnam dignissimos veritatis maiores natus, tempora at molestiae nulla excepturi. Quod quis laborum debitis!</p>
+        <h1 style="margin-bottom: 2rem;">About me</h1>
+        <p style="text-align: left;">Hi! My name is Yegor Bron (Егор Брон).</p>
+        <p style="text-align: left;">I am 16 years old guy, born October 20.</p>
+        <img src="there-is-should-be-a-cool-image-but-i-too-dumb-to-find-something-relevant.jpg" style="float: right; width: 200px;">
+        <p style="text-align: left;">I'm from Russia, live in the small town of Saransk.</p>
+        <p style="text-align: left;">Very interested in programming, a bit of 3D design, philosophy and public speaking.</p>
+        <p style="text-align: left;">In my free time I like to walk, play video games and do nothing! Yes, as just it is.</p>
     </section>
+
     <section id="skillssection">
         <br><br>
         <h1>My skills</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum tenetur iure delectus aliquid voluptatem ex distinctio ipsa. Doloribus mollitia hic delectus dolor, voluptate temporibus accusantium exercitationem a perferendis ullam eligendi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ad consequatur id porro odio doloremque, cumque velit nostrum cupiditate sequi libero eius minima ipsam dignissimos placeat ut. Ea, quam cum?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est minus repellat natus deleniti! Nemo, assumenda ipsam culpa voluptatibus minima ducimus unde minus harum, optio fugiat blanditiis, expedita et accusantium nulla.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, molestias. Vero, perspiciatis qui quibusdam amet debitis dolores mollitia dolor modi eum numquam eaque ducimus molestiae labore iste reprehenderit architecto dolorum?</p>
+        <div>
+          <img style="transform: translate(150px, 0) rotate(30deg);" src="https://skillicons.dev/icons?i=kotlin" alt="kotlin"><p style="text-align: right;">I use Kotlin in some of my projects - e. g. Minecraft plugins or Android apps.</p>
+          <img style="transform: translate(50px, 0) rotate(-20deg);" src="https://skillicons.dev/icons?i=py" alt="python"><p style="text-align: right;">For a long time Python was my mainstream language. Now I primaraly use it for writing small scripts and bots (for Discord and Telegram).</p>
+          <img style="transform: translate(-100px, 0px) rotate(10deg);" src="https://skillicons.dev/icons?i=cs" alt="csharp"><p style="text-align: right;">C# is my primary tool. With ASP.NET Core and some other libraries and frameworks it forms my main tech stack.</p>
+          <img style="transform: translate(80px, 0) rotate(-40deg);" src="https://skillicons.dev/icons?i=c" alt="c"><p style="text-align: right;">I also use C sometimes, mostly for practice and learning some low-level concepts.</p>
+          <img style="transform: translate(-120px, 0) rotate(40deg);" src="https://skillicons.dev/icons?i=bash" alt="bash"><p style="text-align: right;">As I live in both Windows and Linux, Bash Script is nothing more than daily routine.</p>
+          <br><p style="font-size: 0.9em;">I will add more of my skills later!</p>
+</div>
+
+
     </section>
     <section id="projectssection">
         <br><br>
         <h1>Projects list</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero error, officia, fuga rem optio ex nesciunt enim eligendi voluptatem distinctio, labore voluptatibus aperiam obcaecati harum dolorum doloribus cupiditate blanditiis cumque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero error, officia, fuga rem optio ex nesciunt enim eligendi voluptatem distinctio, labore voluptatibus aperiam obcaecati harum dolorum doloribus cupiditate blanditiis cumque.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero error, officia, fuga rem optio ex nesciunt enim eligendi voluptatem distinctio, labore voluptatibus aperiam obcaecati harum dolorum doloribus cupiditate blanditiis cumque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio aperiam magnam laudantium quod reprehenderit. Suscipit repudiandae similique aut, temporibus est doloribus reiciendis corrupti, sequi adipisci incidunt iusto dolorum, animi corporis.</p>
+        <p>Oh no... there's nothing!</p>
+        <p>However...</p>
+        <p>I thinking about automation of project list!</p>
+        <p>It will be made soon, stay tuned!</p>
     </section>
     <section id="linkssection">
         <br><br>
         <h1>Social links</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officia eos incidunt, cumque placeat culpa, veritatis ut, quasi nulla quibusdam repellat voluptatibus voluptatem consequatur temporibus? Quaerat vero in ducimus iure.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officia eos incidunt, cumque placeat culpa, veritatis ut, quasi nulla quibusdam repellat voluptatibus voluptatem consequatur temporibus? Quaerat vero in ducimus iure.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officia eos incidunt, cumque placeat culpa, veritatis ut, quasi nulla quibusdam repellat voluptatibus voluptatem consequatur temporibus? Quaerat vero in ducimus iure.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius soluta enim eligendi laudantium voluptatibus quis doloribus, omnis et, praesentium beatae fugiat accusamus necessitatibus recusandae expedita quibusdam nihil aut, quam ullam.</p>
+        <a href="https://t.me/egorbronn" target="_blank"><img src="https://www.svgrepo.com/download/447150/telegram-outline.svg" alt="" height="64px" style="filter: invert(100%)"></a>
+        <a href="https://discord.com/users/555638466365489172" target="_blank"><img src="https://www.svgrepo.com/download/447163/discord-outline.svg" alt="" height="64px" style="filter: invert(100%)"></a>
+        <a href="https://github.com/EgorBron" target="_blank"><img src="https://www.svgrepo.com/download/521688/github.svg" alt="" height="64px" style="filter: invert(100%)"></a>
+        <a href="https://steamcommunity.com/id/EgorBronn/" target="_blank"><img src="https://www.svgrepo.com/download/504914/steam.svg" alt="" height="64px" style="filter: invert(100%)"></a>
     </section>
-
+    
+    <hr>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="./js/libs/tree.js"></script>
+    <script type="module" src="./js/libs/hills.js"></script>
     <script>
 $(document).ready(function() {
   $(window).scroll(function() {
