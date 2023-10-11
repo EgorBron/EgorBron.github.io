@@ -1,3 +1,4 @@
+import * as THREE from "./tree.js";
 var _instance;
 class Plane {
   constructor() {
